@@ -1,12 +1,28 @@
 {
   "name": "changesets-test-gh-release",
+  "version": "0.0.0",
   "module": "index.ts",
   "type": "module",
-  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oviirup/changesets-test-gh-release.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": ["index.ts"],
+  "scripts": {
+    "changeset": "changeset",
+    "version": "changeset version && bun install",
+    "release": "changeset publish"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@changesets/changelog-github": "^1.0.0",
+    "@changesets/cli": "^3.0.1",
+    "@types/bun": "^1.4.0"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^7.0.2"
   }
 }
